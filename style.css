@@ -72,6 +72,7 @@ nav ul li a:hover::after {
     color: #fff;
     position: absolute;
     bottom: 20%;
+    left: 1%;
 }
 
 .text-box p {
@@ -128,7 +129,7 @@ nav ul li a:hover::after {
 
 .social-icons {
     position: absolute;
-    left: 25%;
+    left: 26%;
     bottom: 16.5%;
 }
 
@@ -159,47 +160,47 @@ nav ul li a:hover::after {
 }
 
 
+
+
+
 /*SECTION 2 STARTS HERE*/
 #section-2 {
-/*    background-color: ;#ee3459*/
     width:100%;
     height:100vh;
     background-size: cover;
     background-position:center;
 }
-
-.head2 {
-    font-size: 40px;
+.section2-head{
+    font-size: 50px;
     line-height: 160px;
     text-align: center;
+    color:whitesmoke;  
+}
+.head2 {
+    line-height: 160px;
+    text-align: center;
+    font-size: 25px;
     color:white;  
 }
 .projects-card {
     display: flex;
+    margin-top: -20px;
+}
+.projects-card2 {
+    display: flex;
+    margin-top: 10px;
 }
 .projects{
-    width: 100%;
-    max-width: 1000px;
+    width: 600px;
+    height: 300px;
     color:#ffffff;
-    text-align: center;
     padding: 10px 10px;
     border: 1px solid rgba(255,255,255,0.3);
     background: rgba(255,255,255,0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0,0,0,0.1);
     filter: blur(0.2px);
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-
-.img2 {
-    width: 50px;
-}
-
-.head2 {
-    font-size: 25px;
+    margin: 10px 15px 0px 15px;
 }
 
 .p2 {
@@ -207,14 +208,101 @@ nav ul li a:hover::after {
 }
 
 
-/* SECTION - # starts here */
+
+/* SECTION - 3 starts here */
 #section-3 {
-    background-color: #ff728d ;
+    background-color: grey;
     width:100%;
     height:100vh;
     background-size: cover;
     background-position:center;
 }
+.industrial-skills {
+    text-align: center;
+}
+
+.section3-subhead {
+    font-size: 25px;   
+    color: white;
+}
+
+.industrial-skills ul{
+    flex: 1;
+    padding: 10px 10px;
+}
+.industrial-skills ul li{
+    margin-top: 10px;
+    color:black;
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    padding: 8px;
+    border: 2px solid #fff;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: 100;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+
+
+.programming-skills {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.languages {
+    margin: 10px 15px 30px 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    
+}
+.tooltip {
+    background: #fff;
+    color:black;
+    font-size: 15px;
+    padding: 2px 5px 2px 5px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    
+}
+
+.img-span{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.icons{
+    height: 50px;
+    margin-top:  10px;
+    align-items: center;
+}
+
+.tooltip:before {
+/*
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: red;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+*/
+}
+.tooltip: hover {
+/*
+    opacity: 1;
+    pointer-events: auto;
+*/
+}
+
+
+
 
 #section-4 {
     background-color: #96B3D3;
