@@ -147,13 +147,13 @@ nav ul li a:hover::after {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     background-color: crimson;
     transform: translateY(-0.25em);
-    transition-delay: 0.1zs;
+    transition-delay: 0.1s;
 }
  
 
 .btn:hover {
   border: 2px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, 5);
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 1px#427388; 
@@ -205,6 +205,10 @@ nav ul li a:hover::after {
 .p2 {
     font-size: 20px;
 }
+/*SECTION 2 ENDS HERE*/
+
+
+
 
 
 
@@ -309,10 +313,14 @@ nav ul li a:hover::after {
     pointer-events: auto;
 */
 }
+/*SECTION 3 ENDS HERE*/
 
 
 
 
+
+/*SECTION 4 STARTS HERE*/
+/*
 #section-4 {
     background-color: #96B3D3;
     width:100%;
@@ -320,3 +328,98 @@ nav ul li a:hover::after {
     background-size: cover;
     background-position:center;
 }
+*/
+/* SECTION 4 ENDS HERE*/
+
+
+
+
+/* FOOTER SECTION STARTS HERE*/
+#bottom-section {
+    background-color: ;
+    width:100%;
+    height:30vh;
+    background-size: cover;
+    background-position:center;
+}
+.bottom {
+    text-align: center;
+}
+
+
+.footer-icons img {
+    
+    width: 35px;
+    display: inline-block;
+    margin: 50px 10px 25px 10px; 
+    padding: 2px 5px 1px 5px;
+    background: white;
+    border-radius: 20%;
+}
+
+.resume {
+    margin: 15px 15px 15px 15px;
+    display: inline-block;
+    
+}
+.resume a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    background: transparent;
+    color: white;
+    border: 2px solid #fff;
+    font-weight: 200;
+    transition: background 0.5s;
+}
+
+.resume a:hover{
+    background-color: crimson;
+    
+}
+.label {
+    margin-top: 15px; 
+}
+
+.last {
+    color: white;
+    font-size: 30px;
+}
+
+.last-img {
+    width: 25px;
+}
+
+
+
+
+
+
+
+/* FOOTER SECTION ENDS HERE*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
