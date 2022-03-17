@@ -11,7 +11,7 @@ html {
 
 #section-1 {
     background-image: linear-gradient(rgba(0,0,0,0.3),transparent);  
-    background-color: #41b3a3;
+    background-color: crimson;
     width:100%;
     height:100vh;
     background-size: cover;
@@ -145,7 +145,7 @@ nav ul li a:hover::after {
 .raise:hover,
 .raise:focus {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-    background-color: #41b3a3;
+    background-color: crimson;
     transform: translateY(-0.25em);
     transition-delay: 0.1s;
 }
@@ -169,7 +169,7 @@ nav ul li a:hover::after {
     height:100vh;
     background-size: cover;
     background-position:center;
-    background-color: #41b3a3;
+    background-color: #323234 ;
 }
 .section2-head{
     font-size: 50px;
@@ -215,7 +215,7 @@ nav ul li a:hover::after {
 
 /* SECTION - 3 starts here */
 #section-3 {
-    background-color:#41b3a3;
+    background-color:#1f2022;
     width:100%;
     height:100vh;
     background-size: cover;
@@ -236,7 +236,7 @@ nav ul li a:hover::after {
 }
 .industrial-skills ul li{
     margin-top: 10px;
-    color: #fff;
+    color: white;
     display: inline-block;
     margin: 10px 20px;
     font-size: 18px;
@@ -245,10 +245,8 @@ nav ul li a:hover::after {
     border: 2px solid #fff;
     background: transparent;
     border-radius: 1px;
-    font-weight: 100;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
-    
-  
+    font-weight: 500;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
 }
 
 
@@ -277,11 +275,13 @@ nav ul li a:hover::after {
 
 .tooltip {
     color:white;
+    background-color:transparent;
+    margin-top: 5px;
     font-size: 15px;
-    font-weight: 200;
-    padding: 3px 5px 2px 5px;
+    font-weight: 600;
+    padding: 5px 15px 5px 15px;
     box-shadow: 0 4px 30px rgba(0,0,0,0.5);
-    
+    border: 2px solid #fff;
 }
 
 .img-span{
@@ -339,7 +339,7 @@ nav ul li a:hover::after {
 
 /* FOOTER SECTION STARTS HERE*/
 #bottom-section {
-    background-color: #333333;
+    background-color: black;
     width:100%;
     height:30vh;
     background-size: cover;
@@ -371,7 +371,7 @@ nav ul li a:hover::after {
     padding: 10px 55px 10px 55px;
     background: transparent;
     border: 2px solid #fff;
-    font-weight: 500;
+    font-weight: 600;
     transition: background 0.5s;
 }
 
@@ -380,7 +380,7 @@ nav ul li a:hover::after {
     box-shadow: inset 0 0 20px rgba(255, 255, 255,0.5), 0 0 50px rgba(255, 255, 255, 5);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
-    text-shadow: 1px 1px 1px#427388; 
+    text-shadow: px 1px 1px #427388; 
 }
 
 

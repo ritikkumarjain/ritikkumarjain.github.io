@@ -1,2 +1,9 @@
-# ritikkumarjain.github.io
-# WEBSITE still in construction.
+# Portfolio Website
+
+### Project Status
+- Still Under Construction
+
+### Tools
+- Used: HTML5, CSS
+- Too use: Javascript
+
