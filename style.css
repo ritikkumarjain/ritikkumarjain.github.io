@@ -40,7 +40,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
+    display: block;;
     list-style: none;
     margin: 10px 30px;
 }
@@ -72,18 +72,18 @@ nav ul li a:hover::after {
     color: #fff;
     position: absolute;
     bottom: 20%;
-    left: 1%;
+    left: 6%;
 }
 
 .text-box p {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
 }
 
 .text-box .head1 {
-    font-size: 190px;
+    font-size: 90px;
     line-height: 160px;
-    margin-left: -10px;
+    margin-left: -3px;
     color:transparent;
     -webkit-text-stroke: 2px #fff;
     background: url(images/back.png);
@@ -95,7 +95,7 @@ nav ul li a:hover::after {
 }
 
 .last-mid {
-    font-size: 40px;
+    font-size: 30px;
     animation-play-state: paused ;
 }
 
@@ -106,7 +106,7 @@ nav ul li a:hover::after {
 }
 
 .text-box h3 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -130,7 +130,7 @@ nav ul li a:hover::after {
 .social-icons {
     position: absolute;
     left: 26%;
-    bottom: 16.5%;
+    bottom: 7.5%;
 }
 
 .social-icons img {
@@ -166,7 +166,7 @@ nav ul li a:hover::after {
 /*SECTION 2 STARTS HERE*/
 #section-2 {
     width:100%;
-    height:100vh;
+    height:260vh;
     background-size: cover;
     background-position:center;
     background-color: #40b0a0;
@@ -178,21 +178,21 @@ nav ul li a:hover::after {
     color:whitesmoke;  
 }
 .head2 {
-    line-height: 160px;
+    line-height: 40px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color:white;  
 }
 .projects-card {
-    display: flex;
+    display: block;
     margin-top: -20px;
 }
 .projects-card2 {
-    display: flex;
+    display: block;
     margin-top: 10px;
 }
 .projects{
-    width: 600px;
+    width: 435px;
     height: 300px;
     color:#ffffff;
     padding: 8px 8px;
