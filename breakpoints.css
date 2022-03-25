@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+    #section-1 {
+        background: orange;
+    }
+    
+    .social-icons {
+        bottom: 8%;
+    }
+}
