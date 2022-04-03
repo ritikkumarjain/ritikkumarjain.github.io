@@ -39,8 +39,12 @@ html {
     /* margin: 0 5px 0 15px; */
 }
 
+#special-img{
+    width: 50px;
+}
+
 #foooter-img {
-    width: 35px;
+    width: 30px;
     /* margin: 0 5px 0 15px; */
 }
 
@@ -49,34 +53,6 @@ html {
 }
 
 .heart {
-    background-image: url("images/love.png");
-    background-size: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    position: relative;
     height: 30px;
     width: 30px;
-    top: 10px;
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
-    animation: pulse 2s ease infinite,
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
-    }
-
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
-    }
-
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
-    }
 }

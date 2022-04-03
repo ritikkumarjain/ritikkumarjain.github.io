@@ -6,19 +6,47 @@ function myTimer()
     document.getElementById("time").innerHTML = timer.toLocaleTimeString();
 }
 
+
 function alertgithub(){
-    return alert("Are you sure you want to vist the Github Page");
+    if (confirm("Are you sure you want to vist the Github Page")) {
+        return;
+    }
+    else {
+        event.preventDefault();
+    }
 }
 
 function alertlinkedin() {
     if (confirm("Are you sure you want to vist the LinkedIn Page")){
-        location="google.com";
+        return;
     }
-    else{
-
+    else {
+        event.preventDefault();
     }
+    
 }
 
 function alertemail() {
-    return alert("Are you sure you want to visit the Email");
+    if(confirm("Are you sure you want to visit the Email")){
+        return;
+    }
+    else{
+        event.preventDefault();
+    }
 }
+
+function pulse() {
+    $('.heart').animate({
+        width: 30, height: 30,
+        opacity: 0.2
+    }, 70, function () {
+        $('.heart').animate({
+            width: 50, height: 50,
+            opacity: 1
+        }, 70, function () {
+            pulse();
+        });
+    });
+};
+
+pulse();
