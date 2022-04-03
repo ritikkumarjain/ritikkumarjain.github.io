@@ -1,0 +1,81 @@
+@media (min-width: 300px) {
+    
+    .social-icons {
+        position: absolute;
+        left: 26%;
+        bottom: 16.5%;
+    }
+    
+    .text-box h3 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+    
+    .last-mid {
+        font-size: 40px;
+        animation-play-state: paused ;
+    }
+    
+    .text-box .head1 {
+        font-size: 190px;
+        line-height: 160px;
+        margin-left: -10px;
+        color:transparent;
+        -webkit-text-stroke: 2px #fff;
+        background: url(images/back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+        animation-play-state: running ;
+
+    }
+    
+    .text-box p {
+        font-size: 40px;
+        font-weight: 500;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 30px;
+    }
+    
+    #section-2 {
+        width:100%;
+        height:100vh;
+        background-size: cover;
+        background-position:center;
+        background-color: #40b0a0;
+    }
+    
+    .head2 {
+        line-height: 160px;
+        text-align: center;
+        font-size: 25px;
+        color:white;  
+    }
+    
+    .projects-card {
+    display: flex;
+    margin-top: -20px;
+    }
+    .projects-card2 {
+        display: flex;
+        margin-top: 10px;
+    }
+    
+    .projects{
+        width: 600px;
+        height: 300px;
+        color:#ffffff;
+        padding: 8px 8px;
+        border: 1px solid rgba(255,255,255,0.3);
+        background: rgba(255,255,255,0.2);
+        box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        filter: blur(0.2px);
+        margin: 10px 15px 0px 15px;
+    }
+
+
+}
