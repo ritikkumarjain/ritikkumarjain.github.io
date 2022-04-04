@@ -35,6 +35,13 @@ function alertemail() {
     }
 }
 
+$(document).ready(function () {
+    $('.toolTip').tooltip({ placement: "top" });
+});
+
+
+
+
 function pulse() {
     $('.heart').animate({
         width: 30, height: 30,
@@ -48,5 +55,4 @@ function pulse() {
         });
     });
 };
-
 pulse();
