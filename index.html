@@ -29,27 +29,6 @@
             $('.toolTip').tooltip({ placement: "top" });
         });
     </script>
-
-    <script>
-        $(document).ready(function () {
-                function pulse() {
-                $('.heart').animate({
-                    width: 30, height: 30,
-                    opacity: 0.2
-                }, 70, function () {
-                    $('.heart').animate({
-                        width: 50, height: 50,
-                        opacity: 1
-                    }, 70, function () {
-                        pulse();
-                    });
-                });
-            };
-
-            
-            });
-            pulse();
-    </script>
    
 
     <div class="overview">
@@ -65,7 +44,7 @@
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#sec4" tabindex="-1">Contact</a>
+                            <a class="nav-link" href="#sec4" tabindex="-1">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">To-Do</a>
@@ -94,35 +73,40 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-warning mb-3">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">Fake News Detection</div>
                         <div class="card-body text-warning">
                             <img src="..." class="card-img-top" alt="...">
                             <p class="card-text text-warning">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                 Ex obcaecati beatae ad
                                 pariatur sequi nam excepturi ducimus illo vitae accusamus.</p>
+                        <a href="#" role="button" class="btn btn-outline-info py-0 px-1"><img src="images/code.svg"></a>
+
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-primary mb-3">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">Topic Modelling of Climate Disasters
+                        </div>
                         <div class="card-body text-warning">
                             <img src="..." class="card-img-top" alt="...">
                             <p class="card-text text-primary">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                 Ex obcaecati beatae ad
                                 pariatur sequi nam excepturi ducimus illo vitae accusamus.</p>
+                            <a href="#" role="button" class="btn btn-outline-info py-0 px-1"><img src="images/code.svg"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-danger mb-3">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">Emotion Detection</div>
                         <div class="card-body text-warning">
                             <img src="..." class="card-img-top" alt="...">
                             <p class="card-text text-danger">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                 Ex obcaecati beatae ad
                                 pariatur sequi nam excepturi ducimus illo vitae accusamus.</p>
+                        <a href="#" role="button" class="btn btn-outline-info py-0 px-1"><img src="images/code.svg"></a>
                         </div>
                     </div>
                 </div>
@@ -135,31 +119,34 @@
                             <p class="card-text text-success">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                 Ex obcaecati beatae ad
                                 pariatur sequi nam excepturi ducimus illo vitae accusamus.</p>
+                            <a href="#" role="button" class="btn btn-outline-info py-0 px-1"><img src="images/code.svg"></a>                         
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-secondary mb-3">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">Breast Cancer Detection</div>
                         <div class="card-body text-warning">
                             <img src="..." class="card-img-top" alt="...">
                             <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing
                                 elit. Ex obcaecati beatae ad
                                 pariatur sequi nam excepturi ducimus illo vitae accusamus.</p>
+                            <a href="#" role="button" class="btn btn-outline-info py-0 px-1"><img src="images/code.svg"></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-secondary mb-3">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">Portfolio Website</div>
                         <div class="card-body text-info">
                             <img src="..." class="card-img-top" alt="...">
                             <p class="card-text text-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
                                 obcaecati
                                 beatae ad
                                 pariatur sequi nam excepturi ducimus illo vitae accusamus.</p>
+                            <a href="#" role="button" class="btn btn-outline-info py-0 px-1"><img src="images/code.svg"></a>
                         </div>
                     </div>
                 </div>
@@ -226,7 +213,7 @@
                     <div class="mr-2 mt-4">
                         <a href="https://github.com/ritikkumarjain" class="btn btn-light toolTip" target="_blank"
                             rel="noopener noreferrer" onclick="alertgithub()" title="Github">
-                            <img src="images/github-brands.svg" class="img-fluid" id="foooter-img">
+                            <img src="images/mark-github.svg" class="img-fluid" id="foooter-img">
                         </a>
                     </div>
                     <div class="mr-2 ml-2 mt-4">
@@ -238,7 +225,7 @@
                     <div class="ml-2 mt-4">
                         <a href="mailto:ritikjain10@outlook.com" class="btn btn-light toolTip" onclick="alertemail()"
                             id="toolTip" title="Email">
-                            <img src="images/envelope-solid.svg" class="img-fluid" id="foooter-img">
+                            <img src="images/mail.svg" class="img-fluid" id="foooter-img">
                         </a>
                     </div>
                 </div>

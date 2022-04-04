@@ -2,7 +2,7 @@
 
 
 .section-1 {
-    height: 45vh;
+    height: 40vh;
     width: 100%;
     background: linear-gradient(141deg,#fc5b3a 0,#f02541 100%);
 }
@@ -49,7 +49,7 @@ html {
 }
 
 .section-4{
-    height:25vh;
+    height:20vh;
 }
 
 .heart {
