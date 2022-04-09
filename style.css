@@ -1,11 +1,21 @@
 /* margin: 2rem 15rem 0 15rem; */
 
 
-.section-1 {
-    /* height: 40vh; */
+/* .section-1 {
     height:19rem;
     width: 100%;
-    background: linear-gradient(141deg,#fc5b3a 0,#f02541 100%);
+    background:;
+} */
+
+#particles-js {
+    height:19rem;
+    position:relative;
+    background: linear-gradient(141deg, #fc5b3a 0, #f02541 100%);
+}
+.js1{
+    position:absolute;
+    height:19rem;
+    width: 100%;
 }
 
 html {
@@ -15,6 +25,7 @@ html {
 .section-1 h1{
     font-size: 90px;
     color:transparent;
+    position:absolute;
     -webkit-text-stroke: 2px #fff;
     background: url(images/back.png);
     -webkit-background-clip: text;
