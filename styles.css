@@ -18,7 +18,7 @@
      padding: 0 20px;
  }
 
- 
+
  h2,
  h3 {
      margin-bottom: 20px;
@@ -100,12 +100,22 @@
  .certification-item {
      text-align: center;
      margin: 15px;
+     text-decoration: none;
      flex-basis: calc(33.333% - 40px);
  }
 
- .certification-item img {
-     max-width: 100px;
+ .certification-item a {
+     text-decoration: none;
+     align-items: center;
+ }
+
+ .certification-img {
+     max-width: 120px;
      margin-bottom: 10px;
+ }
+
+ .certification-link-img{
+    vertical-align: middle;
  }
 
  /* Projects styles */
