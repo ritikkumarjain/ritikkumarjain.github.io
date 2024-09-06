@@ -121,6 +121,8 @@
  .leetcode-card{
     margin-bottom: 10px;
     display: block;
+    width: 100%;
+    height: auto;
  }
 
  /* Projects styles */
@@ -150,6 +152,7 @@
 
  .project-item p {
      padding-bottom: 5px;
+    text-align: justify;
  }
 
  /* Skills styles */
@@ -261,7 +264,7 @@
      box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
      background-color: crimson;
      transform: translateY(-0.25em);
-     transition-delay: 0.1s;
+     transition-delay: 0s;
  }
 
  /* Heart beat animation */
@@ -290,5 +293,12 @@
 
      .certification-item {
          flex-basis: calc(50% - 40px);
+     }
+ }
+
+ @media (max-width: 480px) {
+     .certification-item {
+         flex-basis: calc(100% - 30px);
+         /* One item per row */
      }
  }
