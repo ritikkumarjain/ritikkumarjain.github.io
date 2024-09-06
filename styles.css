@@ -118,6 +118,11 @@
     vertical-align: middle;
  }
 
+ .leetcode-card{
+    margin-bottom: 10px;
+    display: block;
+ }
+
  /* Projects styles */
  .projects {
      display: grid;
