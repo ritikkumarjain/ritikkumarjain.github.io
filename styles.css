@@ -38,6 +38,7 @@
      -webkit-text-stroke: 2px #fff;
      background: url("./images/back.png");
      -webkit-background-clip: text;
+     background-clip: text;
      background-position: 0 0;
      animation: back 20s linear infinite;
      animation-play-state: running;
@@ -313,8 +314,12 @@
          font-size: 2em;
      }
 
+    header p {
+        font-size: 0.8em;
+    }
+
      header {
-         height: 55vh;
+         height: 60vh;
      }
 
      .certification-item {
