@@ -60,7 +60,7 @@
      text-align: center;
      background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
      height: auto;
-     padding-bottom: 20px;
+     padding-bottom: 40px;
  }
 
  header h1 {
@@ -122,7 +122,6 @@
 
  .certification-item {
      text-align: center;
-     margin: 15px;
      text-decoration: none;
      flex-basis: calc(33.333% - 40px);
  }
@@ -145,6 +144,120 @@
      margin-bottom: 10px;
      display: block;
      width: 100%;
+     height: auto;
+ }
+
+ /* Modal Background */
+ /* Button Styling */
+ .open-modal-button {
+     background-color: #e67e22;
+     color: white;
+     border: none;
+     border-radius: 6px;
+     padding: 8px 8px;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background-color 0.3s, box-shadow 0.3s;
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+     display: inline-block;
+     text-align: center;
+ }
+
+ /* Hover Effect */
+ .open-modal-button:hover {
+     background-color: #0056b3;
+     /* Darker shade on hover */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+     /* Enhanced shadow on hover */
+ }
+
+ /* Active Effect */
+ .open-modal-button:active {
+     background-color: #004494;
+     /* Even darker shade on click */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+     /* Reduced shadow on click */
+ }
+
+ /* Responsive Design */
+ @media screen and (max-width: 600px) {
+     .open-modal-button {
+         padding: 6px 12px;
+         /* Adjust padding for small screens */
+         font-size: 12px;
+         /* Smaller font size for small screens */
+     }
+ }
+
+ .modal {
+     display: none;
+     /* Hidden by default */
+     position: fixed;
+     z-index: 1000;
+     /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.5);
+     /* Black background with opacity */
+ }
+
+ /* Modal Background */
+ .modal {
+     display: none;
+     /* Hidden by default */
+     position: fixed;
+     z-index: 1000;
+     /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.6);
+     /* Slightly darker background */
+ }
+
+ /* Modal Content */
+ .modal-content {
+     background-color: #fff;
+     margin: 5% auto;
+     /* Center the modal */
+     padding: 20px;
+     border-radius: 8px;
+     /* Rounded corners */
+     width: 90%;
+     /* Responsive width */
+     max-width: 600px;
+     /* Max width for larger screens */
+     position: relative;
+     /* For positioning the close button */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     /* Soft shadow */
+ }
+
+ /* Close Button */
+ .close-button {
+     color: #333;
+     float: right;
+     font-size: 24px;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+ .close-button:hover,
+ .close-button:focus {
+     color: #000;
+     text-decoration: none;
+ }
+
+ /* Image styling */
+ .modal-content img {
+     width: 100%;
+     /* Ensure image fits within the modal */
      height: auto;
  }
 
@@ -315,12 +428,24 @@
          font-size: 2em;
      }
 
-    header p {
-        font-size: 0.8em;
-    }
+     header p {
+         font-size: 0.8em;
+     }
 
      .certification-item {
          flex-basis: calc(50% - 40px);
+     }
+
+     .modal-content {
+         margin: 10% auto;
+         /* Adjust margin for small screens */
+         padding: 15px;
+         /* Adjust padding */
+     }
+
+     .close-button {
+         font-size: 20px;
+         /* Smaller close button */
      }
  }
 
