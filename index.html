@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ritik's website</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="./styles.css">
     </head>
 
@@ -15,22 +16,33 @@
             <div class="container">
                 <div class="text-box">
                     <h1><span class="head1">RITIK KUMAR JAIN</span></h1>
-                    <p>Hi I'M Ritik, I build reliable backend systems using C#, Node.js, and AWS. Currently, I’m working on a digital food ordering system
-                    for multiple markets at Cognizant. I pay close attention to detail, ensuring to delivery feature of quality.
-                    I'm certified in AWS (CCP) and am working towards the Developer Associate certification. My goal is to keep improving,
-                    collaborate with others and progress ahead in my career. I am currently grinding up my DSA
-                    skills. Here is my
-                    <!-- Trigger Button -->
-                    <button class="open-modal-button">Leetcode Stats</button> .
-                    
-                    <!-- Modal Structure -->
-                    <div class="modal" id="statsModal">
-                        <div class="modal-content">
-                            <span class="close-button">&times;</span>
-                            <img src="https://leetcode.card.workers.dev/poshis?theme=default&font=baloo&extension=null"
-                                alt="LeetCode Stats" />
+                    <p>Hi I'M Ritik, I build reliable backend systems using C#, Node.js, and AWS. Currently, I’m working
+                        on a omni digital food ordering system
+                        for multiple markets at Cognizant. I pay close attention to detail, ensuring to delivery feature
+                        of quality.
+                        I'm certified in AWS (CCP) and am working towards the Developer Associate certification. My goal
+                        is to keep improving,
+                        collaborate with others and progress ahead in my career. I am currently grinding up my DSA
+                        skills. Here are my <a href="#" class="view-stats" data-toggle="modal" data-target="#statsModal">Stats</a>.
+                    </p>
+                </div>
+                <div class="text-button">
+                    <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalLabel">LeetCode Stats</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="https://leetcode.card.workers.dev/poshis?theme=default&font=baloo&extension=null"
+                                        alt="LeetCode Stats" />
+                                </div>
+                            </div>
                         </div>
-                    </div></p>
+                    </div>
                 </div>
             </div>
         </header>
@@ -39,7 +51,7 @@
                 <h2>Experience</h2>
                 <div class="experience">
                     <div class="experience-item">
-                        <h3>Programmer Analyst</h3>
+                        <h4>Programmer Analyst</h4>
                         <p><b>Cognizant Technology Solutions | Sept 2022 - Present</b></p>
                         <p><i class="fa-solid fa-angle-right"></i> Played a key role in development of a menu feature
                             for a
@@ -62,10 +74,10 @@
                             to
                             improve platform
                             functionality</p>
-        
+
                     </div>
                     <div class="experience-item">
-                        <h3>Programmer Analyst</h3>
+                        <h4>Programmer Analyst</h4>
                         <p><b>Cognizant Technology Solutions | Mar 2022 - Aug 2022</b></p>
                         <p><i class="fa-solid fa-angle-right"></i> Quickly developed proficiency in various tools and
                             technologies, including C#, .NET Frameworks,
@@ -80,7 +92,7 @@
                             development consistently completing assessments
                             and progressing
                             through training training programs.</p>
-        
+
                     </div>
                 </div>
             </div>
@@ -107,7 +119,7 @@
                 <h2>Projects</h2>
                 <div class="projects">
                     <div class="project-item">
-                        <h3>Policy Administration System</h3>
+                        <h5>Policy Administration System</h5>
                         <a href="https://github.com/ritikkumarjain/PolicyAdministrationSystem" target="_blank"><i
                                 class="fab fa-github fa-bounce"></i> GitHub</a>
                         <a href="https://drive.google.com/file/d/1ikBoa0CFYkPrcauJSvteeAKgZ7dKklmN/view"
@@ -127,7 +139,7 @@
                             development.</p>
                     </div>
                     <div class="project-item">
-                        <h3>Topic Modelling of Climate Disaster</h3>
+                        <h5>Topic Modelling of Climate Disaster</h5>
                         <a href="https://github.com/ritikkumarjain/NLP/tree/main/Topic%20Modelling" target="_blank"><i
                                 class="fab fa-github fa-bounce"></i> GitHub</a>
                         <p><i class="fa-solid fa-angle-right"></i> Scraped Twitter to create a dataset for Amphan
@@ -140,7 +152,7 @@
                             between tweet frequency and the pinnacle of the disaster’s impact.</p>
                     </div>
                     <div class="project-item">
-                        <h3>Emotion Recognition</h3>
+                        <h5>Emotion Recognition</h5>
                         <a href="https://github.com/ritikkumarjain/Deep-Learning/tree/main/EmotionDetection"
                             target="_blank"><i class="fab fa-github fa-bounce"></i> GitHub</a>
                         <p><i class="fa-solid fa-angle-right"></i> Implemented a CNN to predict 7 different emotions of
@@ -243,7 +255,10 @@
                         href="#experience">Experience</a> | <a href="#projects">Projects</a></p>
             </div>
         </footer>
-        <script src = "script.js"> // Smooth scrolling for anchor links document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); }); </script>
+        <script> // Smooth scrolling for anchor links document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); }); </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 
     </html>
