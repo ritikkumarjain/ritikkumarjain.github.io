@@ -1,25 +1,45 @@
-// Get modal element
-const modal = document.getElementById('statsModal');
+document.addEventListener("DOMContentLoaded", function () {
 
-// Get open modal button
-const openModalButton = document.querySelector('.open-modal-button');
+    // Fetch name from content.json and set to #title
+    fetch('content.json')
+        .then(response => response.json())
+        .then(data => {
+            if (data.name) {
+                document.getElementById("title").textContent = data.name;
+                document.getElementById("description1").textContent = data.description1;
+            }
+        })
+        .catch(() => {
+            // fallback if fetch fails
+            // document.getElementById("title").textContent = "Backend Developer | Cloud Enthusiast";
+        });
 
-// Get close button
-const closeButton = document.querySelector('.close-button');
+    // Get modal element
+    const modal = document.getElementById('statsModal');
+    const openModalButton = document.querySelector('.open-modal-button');
+    const closeButton = document.querySelector('.close-button');
 
-// Open modal
-openModalButton.addEventListener('click', () => {
-    modal.style.display = 'block';
-});
+    // Set the title (this will always run)
+    document.getElementById("title").textContent = "Backend Developer | Cloud Enthusiast";
 
-// Close modal when close button is clicked
-closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+    // Only add event listeners if the elements exist
+    if (openModalButton && modal) {
+        openModalButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+    }
 
-// Close modal when clicking outside the modal content
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
+    if (closeButton && modal) {
+        closeButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+
+    if (modal) {
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
     }
 });
