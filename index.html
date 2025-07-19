@@ -33,17 +33,43 @@
             background-color: #7c3aed;
             color: #fff;
         }
+          @keyframes rich-gradient-x {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rich-animated-gradient {
+            background: linear-gradient(
+            270deg,
+            #ff6ec4,
+            #7873f5,
+            #42e695,
+            #f02fc2,
+            #1cd8d2,
+            #fcb045,
+            #833ab4,
+            #fd1d1d,
+            #00c3ff,
+            #7d5fff,
+            #42e695
+            );
+            background-size: 2000% 200%;
+            animation: rich-gradient-x 20s ease infinite;
+        }
     </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
     <!-- Top Section -->
    <div class="flex flex-col lg:flex-row flex-1">
-       <!-- Top Left -->
-       <div class="w-full lg:w-[80%] relative bg-gradient-to-br from-purple-600 to-indigo-700 flex items-center justify-center min-h-[200px]">
-            <h1 class="z-10 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white animate-slide-in tracking-wide">
-               Ritik Kumar Jain
+        <div class="w-full lg:w-[80%] relative rich-animated-gradient flex flex-col items-center justify-center min-h-[250px] px-4 text-center">
+            <h1 class="z-10 text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-wide animate-slide-in">
+                Ritik Kumar Jain
             </h1>
+            <p id="tagline" class="transition-opacity duration-700 ease-in-out opacity-100 text-lg sm:text-xl md:text-2xl text-white text-center font-medium mt-4 px-4">
+                Fueled by chai, guided by Stack Overflow, powered by vibes.
+            </p>
         </div>
 
        <!-- Sidebar: Hidden on small screens -->

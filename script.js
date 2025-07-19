@@ -227,3 +227,54 @@ function filterSkills(category) {
       </div>
     `).join('');
 }
+const techQuotes = [
+    "Ctrl+C, Ctrl+V — kidding. I swear I build things from scratch.",
+    "Turning music into commits and bugs into features.",
+    "Built to last. Not to impress.",
+    "Design it once. Get it right.",
+    "One function at a time, one bug less.",
+    "No shortcuts. Just clean paths.",
+    "Readable code outlives clever tricks.",
+    "Think deep. Build simple.",
+    "If it scales, it wins.",
+    "The best UI is the one that disappears.",
+    "Details aren’t extras. They’re everything.",
+    "Fast is fine. Stable is better.",
+    "Good architecture means fewer emergencies.",
+    "Code less. Deliver more.",
+    "The user never needs to know — that’s the goal.",
+    "Maintainable code is future-proof code.",
+    "Good systems don't scream; they just work.",
+    "Simplicity isn't basic. It's deliberate.",
+    "I don’t just write features. I engineer clarity.",
+    "What’s not written is just as important.",
+    "Less magic. More logic.",
+    "Style is silent when structure is solid.",
+    "Debugging is my second language.",
+    "Logic before layers.",
+    "Don’t just ship. Stabilize.",
+    "Plan. Build. Rethink. Repeat.",
+    "Solid code is silent.",
+    "Tech changes. Principles don't.",
+    "If it’s not testable, it’s not done.",
+    "Ship fast. But don’t rush.",
+    "Architecture is product thinking in disguise.",
+    "Elegance = Simplicity × Clarity.",
+    "I write for humans, not just machines."
+];
+
+let currentTagline = 0;
+const taglineEl = document.getElementById('tagline');
+
+setInterval(() => {
+    // Fade out
+    taglineEl.classList.add('opacity-0');
+
+    setTimeout(() => {
+        // Update quote
+        currentTagline = (currentTagline + 1) % techQuotes.length;
+        taglineEl.textContent = techQuotes[currentTagline];
+        // Fade in
+        taglineEl.classList.remove('opacity-0');
+    }, 500); // match transition duration
+}, 3000); // change every 4s
