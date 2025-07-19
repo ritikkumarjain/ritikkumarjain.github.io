@@ -1,6 +1,30 @@
 {
-    "name": "RITIK KUMAR JAIN",
-    "description1": "Hi I am Ritik I currently work at Cognizant Technology Solutions as a Software Engineer where sometimes I design but mostly develop backend Solutions. I currently work in a large scale microservice based project called OrderServ 2.0 which is multimarket digital omni channel food ordering solution. My current tech stacks include C#, .NET Core, Amazon Web Services, Databases and too some extent I have experience working in React.js and Node.js.",
-    "description2": "I have experience working in building WebApis, gRPC, Databases(MySQL, AWS DynamoDB), integrating cloud services with our backend. This project has allowed me to work in a fast pace agile environment where I have worked on POC's, features and their enhancements, bugs, interacted with clients, work with cross functional teams, work within deadline. I have also deployed backend servicesto production in a cloud based environment.",
-    "description3": "I am currently looking for new challenges and new opportunities. I want to leverage my experience in the field on microservices, backend development and cloud computing in order to contribute to impactful projects while also continuing to grow in my career."
+    "experience": [
+        {
+            "position": "Software Engineer",
+            "company": "Cognizant Technology Solutions",
+            "from": "September 2022",
+            "to": "Present",
+            "details": [
+                "Developed a time-based menu feature as a key enhancement in OrderServ 2.0, allowing dynamic display of breakfast, lunch, and dinner options based on store hours and usertime zones — improving personalization and reducing ordering errors",
+                "Designed the logic to support store-level configuration allowing different outlets to have unique menu schedule and real time updates",
+                "Integrated React.js frontends with existing .NET APIs to integrate a page to application for end-users leveraging hooks and RESTful services.",
+                "Worked across core flows like ordering, payments and delivery. Integrated third-party payment gateways and delivery services,handling edge cases like failed payments and location mismatches",
+                "Built asynchronous workflows for background processes like order confirmation, Integration logs, etc using message queues.",
+                "Collaborated with cross-functional teams in Agile sprints, aligning feature delivery with fast-moving business priorities.",
+                "Provided production support,resolved critical bugs, and contributed system enhancements that improved uptime and performance.",
+                "Participated in code reviews and shared architectural improvements that promoted cleaner, more maintainable microservices."
+            ]
+        },
+        {
+            "position": "Programmer Analyst",
+            "company": "Cognizant Technology Solutions",
+            "from": "March 2022",
+            "to": "August 2022",
+            "details": [
+                "Actively contributed to the implementation of the MFPE Policy Administration System, collaborating with the team to deliver core functionalities.",
+                "Successfully completed multiple assessments and training programs, improving technical proficiency"
+            ]
+        }
+    ]
 }

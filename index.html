@@ -1,263 +1,135 @@
-<ant_artifact identifier="portfolio-website" type="text/html">
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ritik's website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ritik's Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
 
-    <body>
-        <header>
-            <div class="container">
-                <div class="text-box">
-                    <h1><span class="head1" id="title"></span></h1>
-                    <p id ="description1">
-                    </p>
-                    <!-- I am currently grinding up my DSA skills. Here are my <a href="#" class="view-stats" data-toggle="modal" data-target="#statsModal">Stats.</a> -->
-                </div>
-                <div class="text-button">
-                    <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalLabel">LeetCode Stats</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="https://leetcode.card.workers.dev/poshis?theme=default&font=baloo&extension=null"
-                                        alt="LeetCode Stats" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <section id="experience">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="experience">
-                    <div class="experience-item">
-                        <h4>Software Engineer</h4>
-                        <p><b>Cognizant Technology Solutions | Sept 2022 - Present</b></p>
-                        <p><i class="fa-solid fa-angle-right"></i> Developed a time-based menu feature as a
-                            key enhancement in OrderServ 2.0,
-                            allowing dynamic display of breakfast, lunch, and dinner options based on store
-                            hours and user time zones, improving personalization and reducing ordering errors.
-                        </p>
-                        <i class="fa-solid fa-angle-right"></i> Designed the logic to support store-level configuration allowing different
-                        outlets to have unique menu schedule and real time updates.
-                        </p>
-                        <i class="fa-solid fa-angle-right"></i> Integrated React.js frontends with existing .NET APIs to integrate a page to
-                        application for end-users leveraging hooks and RESTful services
-                        </p>
-                        <i class="fa-solid fa-angle-right"></i> Worked across core flows like ordering, payments and delivery. Integrated
-                        third-party payment gateways and delivery services, handling edge cases like
-                        failed paymentsand location mismatches.
-                        </p>
-                        <i class="fa-solid fa-angle-right"></i> Built asynchronous workflows for background processes like order
-                        confirmation, Integration logs,etc using message queues
-                        </p>
-                        <p><i class="fa-solid fa-angle-right"></i> Collaborated with cross-functional teams in Agile sprints, aligning feature
-                        delivery with fast-moving business priorities.
-                        </p>
-                        <p><i class="fa-solid fa-angle-right"></i> Provided production support,resolved critical bugs, and contributed system
-                        enhancements that improved uptime and performance.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Participated in code reviews and shared architectural improvements that
-                        promoted cleaner, more maintainable microservices.</p>
-                    </div>
-                    <div class="experience-item">
-                        <h4>Programmer Analyst</h4>
-                        <p><b>Cognizant Technology Solutions | Mar 2022 - Aug 2022</b></p>
-                        <p><i class="fa-solid fa-angle-right"></i> Quickly developed proficiency in various tools and
-                            technologies, including C#, .NET Frameworks,
-                            DSA, Design
-                            patterns, etc through intensive training and handson projects.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Actively contributed to the implementation of the
-                            MFPE
-                            project Policy Administration System,
-                            closely with team
-                            members and mentors.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Demonstrated strong dedication to professional
-                            development consistently completing assessments
-                            and progressing
-                            through training training programs.</p>
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
 
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="certifications">
-            <div class="container">
-                <h2>Certifications</h2>
-                <div class="certifications">
-                    <div class="certification-item">
-                        <a href="https://drive.google.com/file/d/1sSTfS1WgAajzZ85Pobg21DLzxaB5tmhz/view"
-                            target="_blank">
-                            <img class="certification-img"
-                                src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
-                                alt="AWS Certified">
-                            <h4>AWS Certified Cloud Practitioner <i class="fa-solid fa-link fa-spin"
-                                    title="Open External Link"></i></h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects">
-                    <div class="project-item">
-                        <h5>Policy Administration System</h5>
-                        <a href="https://github.com/ritikkumarjain/PolicyAdministrationSystem" target="_blank"><i
-                                class="fab fa-github fa-bounce"></i> GitHub</a>
-                        <a href="https://drive.google.com/file/d/1ikBoa0CFYkPrcauJSvteeAKgZ7dKklmN/view"
-                            target="_blank"><i class="fa-solid fa-video fa-bounce"></i> Demo</a>
-                        <p><i class="fa-solid fa-angle-right"></i> Implemented a policy administration system using .NET
-                            framework for the backend, React for
-                            the frontend, and
-                            MySQL Server as the database. Adopted a microservice-based architecture pattern for improved
-                            scalability and
-                            maintainability.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Crafted and deployed the system infrastructure on
-                            AWS, leveraging EC2 for scalable compute
-                            resources, RDS for
-                            reliable database management, and orchestrating REST API deployment for seamless integration
-                            and accessibility.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Utilized Agile Methodology to manage project
-                            development.</p>
-                    </div>
-                    <div class="project-item">
-                        <h5>Topic Modelling of Climate Disaster</h5>
-                        <a href="https://github.com/ritikkumarjain/NLP/tree/main/Topic%20Modelling" target="_blank"><i
-                                class="fab fa-github fa-bounce"></i> GitHub</a>
-                        <p><i class="fa-solid fa-angle-right"></i> Scraped Twitter to create a dataset for Amphan
-                            Cyclone with approximately 130k rows.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Used BERTopic transformer pre-trained architecture to
-                            identify different topics.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Analyzed the topics represented with respect to time
-                            using a time series plot . Uncovered
-                            noteworthy correlations
-                            between tweet frequency and the pinnacle of the disaster’s impact.</p>
-                    </div>
-                    <div class="project-item">
-                        <h5>Emotion Recognition</h5>
-                        <a href="https://github.com/ritikkumarjain/Deep-Learning/tree/main/EmotionDetection"
-                            target="_blank"><i class="fab fa-github fa-bounce"></i> GitHub</a>
-                        <p><i class="fa-solid fa-angle-right"></i> Implemented a CNN to predict 7 different emotions of
-                            a human face.</p>
-                        <p><i class="fa-solid fa-angle-right"></i> Optimized hyperparameters of CNN to improve model
-                            performance. Secured a solid 69.55%
-                            accuracy on the FER13
-                            dataset, highlighting a competitive edge in performance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="skills">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="skills">
-                    <div class="skill-item"> <img src="./images/csharp.png" alt="C#" width="50" title="C#">
-                        <p>C#</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/dotnet.png" alt=".NET" width="50"
-                            title=">NET Framework">
-                        <p>.NET</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/grpc.png" alt="gRPC" width="50"
-                            title="Remote Procedural Calls">
-                        <p>gRPC</p>
-                    </div>
-                    <div class="skill-item" title="Amazon Web Services"> <i class="fab fa-aws aws"></i>
-                        <p>AWS</p>
-                    </div>
-                    <div class="skill-item"> <i class="fab fa-js javascript" title="Javascript"></i>
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="skill-item"> <i class="fab fa-react react" title="React"></i>
-                        <p>React</p>
-                    </div>
-                    <div class="skill-item"> <i class="fab fa-node node" title="Node.js"></i>
-                        <p>Node.js</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/mysql.png" alt="MySQL" width="50" title="MySQL">
-                        <p>MySQL</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/sql.png" alt="SQL Server" width="50" title="SQL Server">
-                        <p>SQL Server</p>
-                    </div>
-                    <div class="skill-item"> <i class="fab fa-git-alt git" title="Git"></i>
-                        <p>Git</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/ef.png" alt="Entity Framework" width="50"
-                            title="Entity Framework">
-                        <p>Entity Framework</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/asp.png" alt="ASP .NET core" width="40"
-                            title="ASP .NET Core">
-                        <p>ASP .NET Core</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/dynamo.png" alt="Dynamo DB" width="40" title="DynamoDB">
-                        <p>NoSQL DynamoDB</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/agile.png" alt="Agile Methodology" width="50"
-                            title="Agile">
-                        <p>Agile</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/dsa.png" alt="Data Structures and Algorithms" width="50"
-                            title="Data Structures and Algorithms">
-                        <p>DSA</p>
-                    </div>
-                    <div class="skill-item"> <img src="./images/dp.png" alt="Design Patterns" width="50">
-                        <p>Design Patterns</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="extracurricular">
-            <div class="container">
-                <h2>Extracurricular</h2>
-                <div class="extracurricular-item">
-                    <p><strong>Microsoft Fix-a-thon (2021):</strong> Selected participant in the event.</p>
-                </div>
-                <div class="extracurricular-item">
-                    <p><strong>WiDS Guwahati:</strong> Volunteer at WiDS Guwahati. Contributed to event planning and
-                        execution for a local organization.</p>
-                </div>
-                <div class="extracurricular-item">
-                    <p><strong>Power BI PwC’s:</strong> Data Analytics Virtual Internship at BCG</p>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                <div class="contact-links">
-                    <a href="mailto:ritikjain10@outlook.com" target="_blank"><img src="./images/message.gif" width="40"
-                            alt="Email" class="raise" title="Email"></a>
-                    <a href="https://linkedin.com/in/ritikkumarjain" target="_blank"><img src="./images/linkedin.png"
-                            width="40" alt="LinkedIn" class="raise" title="LinkedIn"></a>
-                    <a href="https://github.com/ritikkumarjain" target="_blank"><img src="./images/github.png"
-                            width="40" alt="Github" class="raise" title="Github"></a>
-                </div>
-                <p>Made with <img src="./images/love.png" width="25" class="heartbeat" alt="hearbeat"> by ऋतिक. | <a
-                        href="#experience">Experience</a> | <a href="#projects">Projects</a></p>
-            </div>
-        </footer>
-        <script> // Smooth scrolling for anchor links document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); }); </script>
-        <script src="./script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
+        .animate-slide-in {
+            animation: slideIn 1s ease-out forwards;
+        }
 
-    </html>
+        .tab-active {
+            background-color: #7c3aed;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Top Section -->
+   <div class="flex flex-col lg:flex-row flex-1">
+       <!-- Top Left -->
+       <div class="w-full lg:w-[80%] relative bg-gradient-to-br from-purple-600 to-indigo-700 flex items-center justify-center min-h-[200px]">
+           <h1 class="z-10 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white animate-slide-in tracking-wide">
+               Ritik Jain
+           </h1>
+       </div>
+
+       <!-- Sidebar: Hidden on small screens -->
+       <aside class="hidden lg:flex w-[20%] bg-gray-100 flex-col justify-between p-4 space-y-4 overflow-y-auto max-h-full animate-fade-in">
+           <!-- Section: Connect -->
+           <div>
+               <h2 class="text-lg sm:text-xl font-bold text-purple-700 mb-3 border-b border-purple-200 pb-1">Connect</h2>
+               <!-- LinkedIn -->
+               <a href="https://linkedin.com/in/yourusername" target="_blank" class="group flex items-center gap-4 bg-white/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all mb-4 p-2 hover:translate-x-1">
+                   <div class="bg-gradient-to-tr from-purple-600 to-pink-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+                       <i class="fab fa-linkedin-in text-sm"></i>
+                   </div>
+                   <p class="text-gray-800 font-semibold group-hover:text-purple-700 transition">LinkedIn</p>
+               </a>
+               <!-- GitHub -->
+               <a href="https://github.com/yourusername" target="_blank" class="group flex items-center gap-4 bg-white/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all mb-4 p-2 hover:translate-x-1">
+                   <div class="bg-gradient-to-tr from-gray-800 to-gray-600 w-10 h-10 flex items-center justify-center rounded-full text-white">
+                       <i class="fab fa-github text-sm"></i>
+                   </div>
+                   <p class="text-gray-800 font-semibold group-hover:text-gray-900 transition">GitHub</p>
+               </a>
+               <!-- Email -->
+               <a href="mailto:you@example.com" class="group flex items-center gap-4 bg-white/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all mb-4 p-2 hover:translate-x-1">
+                   <div class="bg-gradient-to-tr from-purple-400 to-indigo-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+                       <i class="fas fa-envelope text-sm"></i>
+                   </div>
+                   <p class="text-gray-800 font-semibold group-hover:text-indigo-700 transition">Email</p>
+               </a>
+           </div>
+           <hr class="border-t border-gray-300 my-4">
+           <!-- Documents Section -->
+           <div>
+               <h2 class="text-xl font-extrabold text-purple-700 mb-4">Documents</h2>
+               <!-- Resume -->
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 bg-white/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all mb-4 p-2 hover:translate-x-1">
+                    <div class="bg-gradient-to-tr from-purple-600 to-pink-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+                        <i class="fas fa-file-download text-sm"></i>
+                    </div>
+                    <p class="text-gray-800 font-semibold group-hover:text-purple-700 transition">Resume</p>
+                </a>
+
+                <!-- Cover Letter -->
+                <a href="/cover-letter.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 bg-white/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all p-2 hover:translate-x-1">
+                    <div class="bg-gradient-to-tr from-indigo-500 to-purple-600 w-10 h-10 flex items-center justify-center rounded-full text-white">
+                        <i class="fas fa-file-alt text-sm"></i>
+                    </div>
+                    <p class="text-gray-800 font-semibold group-hover:text-indigo-700 transition">Cover Letter</p>
+                </a>
+
+           </div>
+       </aside>
+   </div>
+
+    <!-- Bottom Section -->
+    <div class="flex-1 bg-white px-4 sm:px-6 md:px-8 py-6">
+        <!-- Cards Row -->
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6">
+            <button onclick="showSection('experience')" class="w-full sm:w-auto bg-purple-100 hover:bg-purple-200 px-6 py-4 rounded-xl shadow transition-all">
+                <p class="text-lg font-semibold">Experience</p>
+            </button>
+            <button onclick="showSection('certifications')" class="w-full sm:w-auto bg-purple-100 hover:bg-purple-200 px-6 py-4 rounded-xl shadow transition-all">
+                <p class="text-lg font-semibold">Certifications</p>
+            </button>
+            <button onclick="showSection('skills')" class="w-full sm:w-auto bg-purple-100 hover:bg-purple-200 px-6 py-4 rounded-xl shadow transition-all">
+                <p class="text-lg font-semibold">Skills</p>
+            </button>
+        </div>
+        <!-- Content Section -->
+        <div id="content" class="text-center text-gray-700 text-base sm:text-lg p-4 border-t border-gray-200">
+            <p>Select a section to view content.</p>
+        </div>
+    </div>
+
+    <!-- Mobile Social Footer -->
+    <footer class="lg:hidden bg-gray-100 border-t border-gray-300 px-4 py-6 w-full">
+        <h2 class="text-lg font-bold text-purple-700 mb-3 text-center">Connect</h2>
+        <div class="flex justify-center gap-6">
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-purple-700 hover:text-purple-900">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="text-gray-800 hover:text-black">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="mailto:you@example.com" class="text-indigo-600 hover:text-indigo-800">
+                <i class="fas fa-envelope text-2xl"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
