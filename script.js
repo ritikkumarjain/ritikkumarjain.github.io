@@ -262,4 +262,4 @@ setInterval(() => {
         // Fade in
         taglineEl.classList.remove('opacity-0');
     }, 500); // match transition duration
-}, 3000); // change every 4s
+}, 3000); 
