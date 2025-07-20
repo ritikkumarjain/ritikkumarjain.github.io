@@ -12,35 +12,7 @@ function showSection(section) {
 
     if (section === 'experience') {
         loadExperience(content);
-    //     content.innerHTML = `
-    //   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    //     <!-- Experience Card 1 -->
-    //     <div class="bg-gray-50 p-6 rounded-xl shadow">
-    //       <h3 class="text-xl font-semibold text-purple-700">Software Engineer</h3>
-    //       <p class="text-gray-600">ABC Tech Pvt Ltd</p>
-    //       <p class="text-sm text-gray-500 mb-3">Jan 2021 – Dec 2023</p>
-    //       <ul class="list-disc list-inside text-left text-gray-700">
-    //         <li>Built scalable APIs using .NET Core</li>
-    //         <li>Led a team of 3 developers</li>
-    //         <li>Integrated SQL Server and Entity Framework</li>
-    //       </ul>
-    //     </div>
-
-    //     <!-- Experience Card 2 -->
-    //     <div class="bg-gray-50 p-6 rounded-xl shadow">
-    //       <h3 class="text-xl font-semibold text-purple-700">Backend Developer</h3>
-    //       <p class="text-gray-600">XYZ Solutions</p>
-    //       <p class="text-sm text-gray-500 mb-3">Aug 2019 – Dec 2020</p>
-    //       <ul class="list-disc list-inside text-left text-gray-700">
-    //         <li>Designed RESTful APIs</li>
-    //         <li>Improved app performance by 40%</li>
-    //         <li>Worked with microservice architecture</li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    // `;
     }
-
     else if (section === 'certifications') {
         content.innerHTML = `<div class="relative w-full flex justify-center items-center">
             <div id="certCarousel" class="w-full max-w-md overflow-hidden relative">
@@ -57,7 +29,6 @@ function showSection(section) {
             <button id="nextCert" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-1 rounded-full hidden">›</button>
             </div>`;
     }
-
     else if (section === 'skills') {
         content.innerHTML = `<!-- Skill Tabs -->
         <div class="flex flex-wrap gap-3 justify-center mb-6">
@@ -76,7 +47,6 @@ function showSection(section) {
 
     }
 }
-
 
 async function loadExperience(container) {
     try {
@@ -114,7 +84,6 @@ async function loadExperience(container) {
     }
 }
 
-
 let currentSkillTab = 'All';
 function filterSkills(category) {
     const grid = document.getElementById('skillsGrid');
@@ -142,73 +111,79 @@ function filterSkills(category) {
         {
             name: "C#",
             icon: "fa-solid fa-code",
-            desc: "Used in backend APIs, microservices, and enterprise systems.",
+            desc: "Used C# to build backend services, write clean OOP logic, and debug complex workflows across microservices. Applied async patterns and LINQ to optimize performance and readability.",
             category: ["All", "Programming"]
+        },
+        {
+            name: ".NET Core (5, 6, 8+)",
+            icon: "fa-solid fa-cubes",
+            desc: "Built scalable REST and gRPC APIs using .NET Core with Clean Architecture and used Design Patterns. Handled middleware, configurations, etc. in microservice environments.",
+            category: [ "All", "Frameworks"]
         },
         {
             name: "Java",
             icon: "fa-brands fa-java",
-            desc: "Built OOP projects and practiced in DSA and backend systems.",
+            desc: "Practiced Java for data structures and algorithms",
             category: ["All", "Programming"]
         },
         {
             name: "JavaScript",
             icon: "fa-brands fa-js",
-            desc: "Used in frontend React apps and backend services.",
+            desc: "Used JavaScript in building responsive UIs with React and backend services using Node.js. Implemented I/ O workflows, and REST integrations in full - stack apps.",
             category: ["All", "Programming", "Tools"]
         },
         {
             name: "ASP.NET Core",
             icon: "fa-solid fa-cubes",
-            desc: "Developed high-performance REST APIs using Clean Architecture.",
+            desc: "Built robust RESTful APIs and microservices using ASP.NET Core 6/7/8+. Focused on performance, clean architecture, and maintainable backend systems.",
             category: ["All", "Frameworks"]
         },
         {
             name: "Entity Framework",
             icon: "fa-solid fa-database",
-            desc: "Handled DB context, migrations, and LINQ queries.",
+            desc: "Worked with EF Core for database interactions, migrations, and LINQ queries.  Handled DbContext lifecycle, performance tuning, and relational modeling.",
             category: ["All", "Frameworks", "Databases"]
         },
         {
             name: "gRPC",
             icon: "fa-solid fa-link",
-            desc: "Built contract-first services for internal microservice communication.",
+            desc: "Built contract-first services using gRPC for high-performance microservice communication. Implemented streaming and handled Protobuf- based data contracts effectively.",
             category: ["All", "Frameworks"]
         },
         {
             name: "AWS (Lambda, S3, DynamoDB)",
             icon: "fa-brands fa-aws",
-            desc: "Serverless services, event-driven apps, data storage & queues.",
+            desc: "Used AWS Lambda for serverless computing, integrated with S3 for storage and DynamoDB for NoSQL persistence. Designed event- driven architectures with scalable, cost - efficient AWS services.",
             category: ["All", "Cloud"]
         },
         {
             name: "Azure",
             icon: "fa-brands fa-microsoft",
-            desc: "Used App Services, Functions, and SQL databases.",
+            desc: "Used Azure App Services, Functions, and SQL databases for basic cloud deployments for personal task.",
             category: ["All", "Cloud"]
         },
         {
             name: "React.js",
             icon: "fa-brands fa-react",
-            desc: "Frontend SPA development with hooks, state, and routing.",
+            desc: "Built frontend applications using React.js with hooks, routing. Have some industry- level exposure building clean and responsive UIs.",
             category: ["All", "Tools"]
         },
         {
             name: "Node.js",
             icon: "fa-brands fa-node-js",
-            desc: "Backend services, CLI tools, and AWS integrations.",
+            desc: "Used Node.js to build backend APIs, including webhook-triggered services and I/O-heavy operations. Handled request flows, external integrations, and lightweight utilities in production.",
             category: ["All", "Tools"]
         },
         {
             name: "MySQL",
             icon: "fa-solid fa-database",
-            desc: "Structured relational database with stored procedures.",
+            desc: "Designed and optimized relational databases using MySQL. Wrote stored procedures, managed schema changes, and improved query performance. Mainly worked for Reporting/analytics workflows",
             category: ["All", "Databases"]
         },
         {
-            name: "DynamoDB",
+            name: "AWS DynamoDB",
             icon: "fa-solid fa-database",
-            desc: "Scalable NoSQL used in AWS Lambda-based apps.",
+            desc: "Used DynamoDB in serverless microservices to enable real-time, scalable data access. Handled read/ write patterns, key design, and performance tuning in production systems.",
             category: ["All", "Databases", "Cloud"]
         }
     ];
