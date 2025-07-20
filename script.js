@@ -1,60 +1,78 @@
 let currentSection = null;
 
 function showSection(section) {
-    if(currentSection == section){
-        const content = document.getElementById('content');
+    const content = document.getElementById('content');
+    const buttons = document.querySelectorAll('[data-section]');
+
+    buttons.forEach(btn => {
+        if (btn.getAttribute('data-section') === section && currentSection !== section) {
+            btn.classList.add('bg-purple-300', 'text-white');
+        } else {
+            btn.classList.remove('bg-purple-300', 'text-white');
+        }
+    });
+
+    if (currentSection === section) {
         content.innerHTML = '<p>Select a section to view content.</p>';
         currentSection = null;
+        buttons.forEach(btn => btn.classList.remove('bg-purple-300', 'text-white', 'ring-2', 'ring-purple-500'));
         return;
     }
 
     currentSection = section;
 
     if (section === 'experience') {
-        loadExperience(content);
+        loadExperience(content).then(() => {
+            content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     }
     else if (section === 'certifications') {
         content.innerHTML = `<div class="relative w-full flex justify-center items-center">
             <div id="certCarousel" class="w-full max-w-md overflow-hidden relative">
-                <div id="certSlides" class="flex transition-transform duration-700 ease-in-out" style="transform: translateX(0);">
+            <div id="certSlides" class="flex transition-transform duration-700 ease-in-out" style="transform: translateX(0);">
+            
+            <!-- Slide -->
+            <div class="min-w-full flex justify-center relative group">
+                <a href="https://drive.google.com/file/d/1sSTfS1WgAajzZ85Pobg21DLzxaB5tmhz/view" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="transform transition duration-500 hover:scale-105 relative block rounded-xl overflow-hidden">
                 
-                <div class="min-w-full flex justify-center">
-                    <a href="https://drive.google.com/file/d/1sSTfS1WgAajzZ85Pobg21DLzxaB5tmhz/view" target="_blank" rel="noopener noreferrer"
-                    class="transform transition duration-500 hover:scale-105">
-                    <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
-                        alt="AWS Certification"
-                        class="rounded-xl shadow-xl max-w-[300px] max-h-[250px] object-contain">
-                    </a>
+                <!-- Certification Image -->
+                <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
+                alt="AWS Certification"
+                class="rounded-xl shadow-xl max-w-[300px] max-h-[250px] object-contain w-full">
+                
+                <!-- Overlay with Link Icon -->
+                <div class="absolute inset-0 bg-purple-700/80 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="flex flex-col items-center">
+                    <i class="fa fa-external-link text-white text-3xl mb-2" aria-hidden="true"></i>
+                    <span class="text-white text-xs font-semibold">Opens in new window</span>
+                </span>
                 </div>
+                </a>
+            </div>
+            <!-- End Slide -->
 
-                <!-- Add more slides
-                <div class="min-w-full flex justify-center">
-                    <a href="https://link-to-cert.com" target="_blank" class="transform transition duration-500 hover:scale-105">
-                    <img src="https://link-to-cert-image.png" alt="Other Cert" class="rounded-xl shadow-xl max-w-[300px] max-h-[250px] object-contain">
-                    </a>
-                </div>
-                -->
-                
-                </div>
+            </div>
             </div>
             </div>`;
+        content.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     else if (section === 'skills') {
         content.innerHTML = `<!-- Skill Tabs -->
         <div class="flex flex-wrap gap-3 justify-center mb-6">
         ${['All', 'Programming', 'Frameworks', 'Cloud', 'Tools', 'Databases']
                     .map(tab => `
-            <button onclick="filterSkills('${tab}')" class="tab-button bg-purple-100 hover:bg-purple-200 text-sm px-4 py-2 rounded-full shadow transition">
+            <button onclick="filterSkills('${tab}')" class="tab-button bg-purple-100 hover:bg-purple-200 text-sm px-4 py-2 rounded-full shadow transition" data-tab="${tab}">
                 ${tab}
             </button>
             `).join('')}
         </div>
-
         <!-- Skills Grid -->
         <div id="skillsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center"></div>`;
-
         filterSkills('All');
-
+        content.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -64,7 +82,6 @@ async function loadExperience(container) {
 
         const data = await response.json();
         container.innerHTML = `
-        <h2 class="text-xl font-bold mb-4">Experience</h2>
         <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         </div>
         `;
@@ -80,11 +97,11 @@ async function loadExperience(container) {
                 <p class="text-gray-600">${exp.company}</p>
                 <p class="text-sm text-gray-500 mb-3">${exp.from} – ${exp.to}</p>
                 <ul class="text-left text-gray-700 space-y-2">
-                    ${exp.details.map(item => `
+                ${exp.details.map(item => `
                     <li class="relative pl-6 before:content-['➤'] before:absolute before:left-0 before:text-purple-500">
-                        ${item}
+                    <p class="text-justify">${item}</p>
                     </li>
-                    `).join('')}
+                `).join('')}
                 </ul>`;
 
             grid.appendChild(card);
@@ -262,4 +279,4 @@ setInterval(() => {
         // Fade in
         taglineEl.classList.remove('opacity-0');
     }, 500); // match transition duration
-}, 3000); 
+}, 3000);
