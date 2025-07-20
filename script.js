@@ -16,17 +16,27 @@ function showSection(section) {
     else if (section === 'certifications') {
         content.innerHTML = `<div class="relative w-full flex justify-center items-center">
             <div id="certCarousel" class="w-full max-w-md overflow-hidden relative">
-                <div id="certSlides" class="flex transition-transform duration-500" style="transform: translateX(0);">
-                <!-- Slide 1 -->
+                <div id="certSlides" class="flex transition-transform duration-700 ease-in-out" style="transform: translateX(0);">
+                
                 <div class="min-w-full flex justify-center">
-                    <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png" alt="AWS Certification" class="rounded-xl shadow-xl max-w-[300px] max-h-[250px] object-contain">
+                    <a href="https://drive.google.com/file/d/1sSTfS1WgAajzZ85Pobg21DLzxaB5tmhz/view" target="_blank" rel="noopener noreferrer"
+                    class="transform transition duration-500 hover:scale-105">
+                    <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
+                        alt="AWS Certification"
+                        class="rounded-xl shadow-xl max-w-[300px] max-h-[250px] object-contain">
+                    </a>
                 </div>
+
+                <!-- Add more slides
+                <div class="min-w-full flex justify-center">
+                    <a href="https://link-to-cert.com" target="_blank" class="transform transition duration-500 hover:scale-105">
+                    <img src="https://link-to-cert-image.png" alt="Other Cert" class="rounded-xl shadow-xl max-w-[300px] max-h-[250px] object-contain">
+                    </a>
+                </div>
+                -->
+                
                 </div>
             </div>
-
-            <!-- Navigation (hidden for now since only one slide) -->
-            <button id="prevCert" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-1 rounded-full hidden">‹</button>
-            <button id="nextCert" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-1 rounded-full hidden">›</button>
             </div>`;
     }
     else if (section === 'skills') {
